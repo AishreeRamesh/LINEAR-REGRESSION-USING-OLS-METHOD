@@ -1,0 +1,19 @@
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+x=np.array([1,2,3,4,5])
+y=np.array([2,4,5,4,5])
+n=len(x)
+Numerator=np.sum(x*y)-n*np.mean(x)*np.mean(y)
+Denominator=np.sum(x*x)-n*np.mean(x)*np.mean(x)
+b1=Numerator/Denominator
+b0=np.mean(y)-b1*np.mean(x)
+print("the value of b1 is",b1)
+print("The value of b0 is", b0)
+y_predicted=b0+b1*xplt.scatter(x,y,c="r")
+plt.plot(x,y_predicted)
+plt.xlabel("Input")
+plt.ylabel("Output")
+plt.title("Best Fit Line")
+y_predicted=b0+b1*12
+print("The predicted output for x=12 is",y_predicted)
